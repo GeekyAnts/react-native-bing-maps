@@ -1,10 +1,18 @@
-import { requireNativeComponent, ViewStyle } from 'react-native';
+import {
+  NativeSyntheticEvent,
+  requireNativeComponent,
+  ViewStyle,
+} from 'react-native';
+import type { MapLocation, MapPin } from './types';
 
 type BingMapsProps = {
-  color: string;
-  style: ViewStyle;
+  onMapPinClicked?: (e: NativeSyntheticEvent<EventTarget>) => void;
+  onMapLoadingStatusChanged?: (e: NativeSyntheticEvent<EventTarget>) => void;
+  pins?: MapPin[];
+  mapLocation?: MapLocation;
+  mapStyle?: string;
+  style?: ViewStyle;
 };
-
 
 export const BingMapsViewManager = requireNativeComponent<BingMapsProps>(
   'BingMapsView'

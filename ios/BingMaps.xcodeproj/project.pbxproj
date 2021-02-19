@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-		5E555C0D2413F4C50049A1A2 /* BingMaps.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* BingMaps.m */; };
-		F4FF95D7245B92E800C19C63 /*  BingMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  BingMaps.swift */; };
-
+		E678A6AD25DEF31700B20229 /* BingMapsViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E678A6A825DEEA4E00B20229 /* BingMapsViewManager.swift */; };
+		E678A6B025DEF31D00B20229 /* BingMapsViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E678A6A725DEE8FF00B20229 /* BingMapsViewManager.m */; };
+		E678A6B225DEF32000B20229 /* BingMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = E678A6A525DEE8ED00B20229 /* BingMaps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,11 +26,12 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libBingMaps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBingMaps.a; sourceTree = BUILT_PRODUCTS_DIR; };
-
 		B3E7B5891CC2AC0600A0062D /* BingMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BingMaps.m; sourceTree = "<group>"; };
+		E678A6A525DEE8ED00B20229 /* BingMaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingMaps.swift; sourceTree = "<group>"; };
+		E678A6A725DEE8FF00B20229 /* BingMapsViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BingMapsViewManager.m; sourceTree = "<group>"; };
+		E678A6A825DEEA4E00B20229 /* BingMapsViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingMapsViewManager.swift; sourceTree = "<group>"; };
+		E678A6B425DEF34F00B20229 /* BingMaps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BingMaps-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* BingMaps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BingMaps-Bridging-Header.h"; sourceTree = "<group>"; };
-		F4FF95D6245B92E800C19C63 /* BingMaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingMaps.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,11 +56,12 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-
-				F4FF95D6245B92E800C19C63 /* BingMaps.swift */,
+				E678A6A825DEEA4E00B20229 /* BingMapsViewManager.swift */,
+				E678A6A725DEE8FF00B20229 /* BingMapsViewManager.m */,
+				E678A6A525DEE8ED00B20229 /* BingMaps.swift */,
 				B3E7B5891CC2AC0600A0062D /* BingMaps.m */,
 				F4FF95D5245B92E700C19C63 /* BingMaps-Bridging-Header.h */,
-
+				E678A6B425DEF34F00B20229 /* BingMaps-Bridging-Header.h */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -122,10 +123,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-				F4FF95D7245B92E800C19C63 /* BingMaps.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* BingMaps.m in Sources */,
-
+				E678A6AD25DEF31700B20229 /* BingMapsViewManager.swift in Sources */,
+				E678A6B025DEF31D00B20229 /* BingMapsViewManager.m in Sources */,
+				E678A6B225DEF32000B20229 /* BingMaps.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,11 +238,9 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = BingMaps;
 				SKIP_INSTALL = YES;
-
 				SWIFT_OBJC_BRIDGING_HEADER = "BingMaps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-
 			};
 			name = Debug;
 		};
@@ -259,10 +257,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = BingMaps;
 				SKIP_INSTALL = YES;
-
 				SWIFT_OBJC_BRIDGING_HEADER = "BingMaps-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-
 			};
 			name = Release;
 		};
