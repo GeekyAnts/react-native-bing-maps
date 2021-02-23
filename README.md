@@ -66,7 +66,7 @@ for separate creadential key for build types you can add it respective build typ
 
 ## Usage
 
-```js
+```ts
 import * as React from 'react';
 
 import { StyleSheet, View } from 'react-native';
@@ -115,19 +115,19 @@ string in JSON format to change the appearance of the map. Refer [How to change 
 
 Style to be applied to the parent view of Bing Map view.
 
-#### onMapPinClicked?: (e: NativeSyntheticEvent<EventTarget>) => void
+#### onMapPinClicked?: (e: NativeSyntheticEvent) => void
 
 Event returns `lat` and `long` of the pin clicked on map.
 
-#### onMapLoadingStatusChanged?: (e: NativeSyntheticEvent<EventTarget>) => void
+#### onMapLoadingStatusChanged?: (e: NativeSyntheticEvent) => void
 
 Event returns the loading status of the map.
 
 ## Types
 
-- [BingMapsProps]()
-- [MapLocation]()
-- [MapPin]()
+- [BingMapsProps](#BingMapsProps)
+- [MapLocation](#MapLocation)
+- [MapPin](#MapPin)
 
 #### BingMapsProps
 
@@ -145,7 +145,7 @@ type BingMapsProps = {
 
 #### MapLocation
 
-```js
+```ts
 MapLocation {
   lat: number;
   long: number;
@@ -157,7 +157,7 @@ Where `zoom` is a number between 1 and 19. For more info on zoom levels visit Mi
 
 #### MapPin
 
-```javascript
+```ts
 MapPin {
   lat: number;
   long: number;
