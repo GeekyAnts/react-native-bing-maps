@@ -6,13 +6,13 @@ import {
 import type { MapLocation, MapPin } from './types';
 
 type BingMapsProps = {
-  onMapPinClicked?: (e: NativeSyntheticEvent<EventTarget>) => void;
-  onMapLoadingStatusChanged?: (e: NativeSyntheticEvent<EventTarget>) => void;
+  credentialsKey: string;
   pins?: MapPin[];
   mapLocation?: MapLocation;
   mapStyle?: string;
   style?: ViewStyle;
-  credentialsKey: string;
+  onMapPinClicked?: (e: NativeSyntheticEvent<EventTarget>) => void;
+  onMapLoadingStatusChanged?: (e: NativeSyntheticEvent<EventTarget>) => void;
 };
 
 export const BingMapsViewManager = requireNativeComponent<BingMapsProps>(
