@@ -14,6 +14,7 @@ class BingMaps: MSMapView {
   var mapElementLayer: MSMapElementLayer;
   @objc var onMapPinClicked: RCTDirectEventBlock?;
   @objc var onMapLoadingStatusChanged: RCTDirectEventBlock?;
+  
   @objc var pins: NSArray = [] {
     didSet {
       self.setMapPins(pinData: pins);
@@ -36,11 +37,13 @@ class BingMaps: MSMapView {
     }
   }
   
+    @objc override var credentialsKey: String {
+        didSet{}
+    }
   
   override init(frame: CGRect) {
     mapElementLayer = MSMapElementLayer();
     super.init(frame: frame);
-    self.credentialsKey = "Ap4QcVrvAUTkJKLM9RbTtRh1MD7Ioqt_QBxubQz3rIaVDskMgVZXQ2ux-NgfO30d";
     self.buildingsVisible = false;
     self.businessLandmarksVisible = false;
     self.transitFeaturesVisible = false;

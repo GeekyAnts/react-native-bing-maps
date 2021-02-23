@@ -9,4 +9,5 @@
     RCT_EXPORT_VIEW_PROPERTY(pins, NSArray);
     RCT_EXPORT_VIEW_PROPERTY(mapLocation, NSDictionary);
     RCT_EXPORT_VIEW_PROPERTY(mapStyle, NSString);
+    RCT_EXPORT_VIEW_PROPERTY(credentialsKey, NSString);
 @end

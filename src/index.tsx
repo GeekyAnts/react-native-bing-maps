@@ -12,6 +12,7 @@ type BingMapsProps = {
   mapLocation?: MapLocation;
   mapStyle?: string;
   style?: ViewStyle;
+  credentialsKey: string;
 };
 
 export const BingMapsViewManager = requireNativeComponent<BingMapsProps>(
