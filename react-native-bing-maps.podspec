@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
   
   
   s.dependency "React-Core"
-  s.dependency 'MicrosoftMapsSDK', '~> 1.0.0'
+  s.dependency 'MicrosoftMapsSDK', '~> 1.1.4'
 end
