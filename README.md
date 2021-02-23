@@ -167,5 +167,6 @@ MapPin {
 
 where `icon` is the SVG string for the pin icon you want to display;
 
-##License
+## License
+
 MIT
