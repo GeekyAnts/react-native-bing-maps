@@ -2,12 +2,13 @@ import * as React from 'react';
 
 import { StyleSheet, View } from 'react-native';
 import BingMapsViewManager from 'react-native-bing-maps';
+import { BING_MAPS_KEY } from '@env';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <BingMapsViewManager
-        credentialsKey="Ap4QcVrvAUTkJKLM9RbTtRh1MD7Ioqt_QBxubQz3rIaVDskMgVZXQ2ux-NgfO30d"
+        credentialsKey={BING_MAPS_KEY}
         mapLocation={{ lat: 12.9010875, long: 77.6095084, zoom: 15 }}
         style={styles.box}
       />
