@@ -91,54 +91,48 @@ public class BingMaps extends MapView {
     super(context);
     FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
     this.setLayoutParams(layoutParams);
-    this.setBuildingsVisible(false);
-    this.setBusinessLandmarksVisible(false);
-    this.setTransitFeaturesVisible(false);
-    this.getUserInterfaceOptions().setCompassButtonVisible(false);
-    this.getUserInterfaceOptions().setTiltButtonVisible(false);
-    this.getUserInterfaceOptions().setZoomButtonsVisible(false);
     that=this;
     mapElementLayer = new MapElementLayer();
 
-//    this.addOnMapLoadingStatusChangedListener(new OnMapLoadingStatusChangedListener() {
-//      @Override
-//      public boolean onMapLoadingStatusChanging(MapLoadingStatus mapLoadingStatus) {
-//        WritableMap event = Arguments.createMap();
-//        int status = mapLoadingStatus.ordinal();
-//        event.putInt("status", status);
-//
-//        reactContext.getJSModule(RCTEventEmitter.class).receiveEvent(
-//          getId(),
-//          "onMapLoadingStatusChanged",
-//          event
-//        );
-//        return true;
-//      }
-//    });
+    this.addOnMapLoadingStatusChangedListener(new OnMapLoadingStatusChangedListener() {
+      @Override
+      public boolean onMapLoadingStatusChanged(MapLoadingStatus mapLoadingStatus) {
+        WritableMap event = Arguments.createMap();
+        int status = mapLoadingStatus.ordinal();
+        event.putInt("status", status);
 
-//    mapElementLayer.addOnMapElementTappedListener(new OnMapElementTappedListener() {
-//      @Override
-//      public boolean onMapElementTapped(MapElementTappedEventArgs mapElementTappedEventArgs) {
-//
-//        double lat = mapElementTappedEventArgs.location.getPosition().getLatitude();
-//        double lon = mapElementTappedEventArgs.location.getPosition().getLongitude();
-//        double zoomLevel  = that.getZoomLevel();
-//
-//        WritableMap event = Arguments.createMap();
-//        WritableMap location = Arguments.createMap();
-//        location.putDouble("lat", lat);
-//        location.putDouble("long", lon);
-//        location.putDouble("zoom", zoomLevel);
-//        event.putMap("location", location);
-//
-//        reactContext.getJSModule(RCTEventEmitter.class).receiveEvent(
-//          getId(),
-//          "onMapPinClicked",
-//          event
-//        );
-//        return true;
-//      }
-//    });
+        reactContext.getJSModule(RCTEventEmitter.class).receiveEvent(
+          getId(),
+          "onMapLoadingStatusChanged",
+          event
+        );
+        return true;
+      }
+    });
+
+    mapElementLayer.addOnMapElementTappedListener(new OnMapElementTappedListener() {
+      @Override
+      public boolean onMapElementTapped(MapElementTappedEventArgs mapElementTappedEventArgs) {
+
+        double lat = mapElementTappedEventArgs.location.getPosition().getLatitude();
+        double lon = mapElementTappedEventArgs.location.getPosition().getLongitude();
+        double zoomLevel  = that.getZoomLevel();
+
+        WritableMap event = Arguments.createMap();
+        WritableMap location = Arguments.createMap();
+        location.putDouble("lat", lat);
+        location.putDouble("long", lon);
+        location.putDouble("zoom", zoomLevel);
+        event.putMap("location", location);
+
+        reactContext.getJSModule(RCTEventEmitter.class).receiveEvent(
+          getId(),
+          "onMapPinClicked",
+          event
+        );
+        return true;
+      }
+    });
     this.getLayers().add(mapElementLayer);
 
   }
