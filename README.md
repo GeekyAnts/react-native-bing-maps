@@ -2,6 +2,8 @@
 
 A React Native wrapper for Microsoft Bing Maps.
 
+[![Example Screenshot](https://github.com/GeekyAnts/react-native-bing-maps/blob/master/example/Screenshot.png?raw=true 'Example Screenshot')](https://github.com/GeekyAnts/react-native-bing-maps/blob/master/example/Screenshot.png?raw=true 'Example Screenshot')
+
 ## TOC
 
 - [Installation](#installation)
@@ -50,7 +52,9 @@ ext.credentialsKey = "you_bing_maps_key_here"
 apply from: 'secrets.gradle'
 ```
 
-at the top. 3. now add the key to the builds by adding
+at the top.
+
+3. now add the key to the builds by adding
 
 ```groovy
 buildTypes.each {
