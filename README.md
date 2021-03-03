@@ -96,6 +96,13 @@ export default function App() {
 - [pins](#pins)
 - [mapStyle](#mapStyle)
 - [style](#style)
+- [buildingsVisible](#buildingsVisible);
+- [businessLandmarksVisible](#businessLandmarksVisible)
+- [transitFeaturesVisible](#transitFeaturesVisible)
+- [compassButtonVisible](#compassButtonVisible)
+- [tiltButtonVisible](#tiltButtonVisible)
+- [zoomButtonsVisible](#zoomButtonsVisible)
+- [copyrightDisplay](#copyrightDisplay)
 - [onMapPinClicked](#onMapPinClicked)
 - [onMapLoadingStatusChanged](#onMapLoadingStatusChanged)
 
@@ -118,6 +125,34 @@ string in JSON format to change the appearance of the map. Refer [How to change 
 #### style?: ViewStyle
 
 Style to be applied to the parent view of Bing Map view.
+
+#### buildingsVisible?: boolean;
+
+Sets the building visibility on the map.
+
+#### businessLandmarksVisible?: boolean;
+
+Sets the landmarks icons visibility on the map.
+
+#### transitFeaturesVisible?: boolean;
+
+Sets transit features visibility on the map.
+
+#### compassButtonVisible?: boolean;
+
+Sets compass button visiblity on the map.
+
+#### tiltButtonVisible?: boolean;
+
+Sets tilt button visibility on the map.
+
+#### zoomButtonsVisible?: boolean;
+
+Sets zoom buttons visibility on the map.
+
+#### copyrightDisplay?: 'allowHiding' | 'always';
+
+Sets the microsoft copyright caption visibility on the map.
 
 #### onMapPinClicked?: (e: NativeSyntheticEvent) => void
 
@@ -142,6 +177,13 @@ type BingMapsProps = {
   mapLocation?: MapLocation;
   mapStyle?: string;
   style?: ViewStyle;
+  buildingsVisible?: boolean;
+  businessLandmarksVisible?: boolean;
+  transitFeaturesVisible?: boolean;
+  compassButtonVisible?: boolean;
+  tiltButtonVisible?: boolean;
+  zoomButtonsVisible?: boolean;
+  copyrightDisplay?: 'allowHiding' | 'always';
   onMapPinClicked?: (e: NativeSyntheticEvent<EventTarget>) => void;
   onMapLoadingStatusChanged?: (e: NativeSyntheticEvent<EventTarget>) => void;
 };
