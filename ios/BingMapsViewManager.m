@@ -10,4 +10,11 @@
     RCT_EXPORT_VIEW_PROPERTY(mapLocation, NSDictionary);
     RCT_EXPORT_VIEW_PROPERTY(mapStyle, NSString);
     RCT_EXPORT_VIEW_PROPERTY(credentialsKey, NSString);
+    RCT_EXPORT_VIEW_PROPERTY(buildingsVisible, BOOL);
+    RCT_EXPORT_VIEW_PROPERTY(businessLandmarksVisible, BOOL);
+    RCT_EXPORT_VIEW_PROPERTY(transitFeaturesVisible, BOOL);
+    RCT_EXPORT_VIEW_PROPERTY(compassButtonVisible, BOOL);
+    RCT_EXPORT_VIEW_PROPERTY(tiltButtonVisible, BOOL);
+    RCT_EXPORT_VIEW_PROPERTY(zoomButtonsVisible, BOOL);
+    RCT_EXPORT_VIEW_PROPERTY(copyrightDisplay, NSString);
 @end

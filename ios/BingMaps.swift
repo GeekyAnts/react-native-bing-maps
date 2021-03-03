@@ -40,17 +40,54 @@ class BingMaps: MSMapView {
     @objc override var credentialsKey: String {
         didSet{}
     }
-  
+    
+    @objc override var buildingsVisible: Bool {
+        didSet{}
+    }
+    
+    @objc override var businessLandmarksVisible: Bool {
+        didSet{}
+    }
+
+    @objc override var transitFeaturesVisible: Bool {
+        didSet{}
+    }
+    
+    @objc var compassButtonVisible: Bool {
+        didSet{
+            self.userInterfaceOptions.compassButtonVisible = compassButtonVisible;
+        }
+    }
+    
+    @objc var tiltButtonVisible: Bool {
+        didSet{
+            self.userInterfaceOptions.tiltButtonVisible = tiltButtonVisible;
+        }
+    }
+
+    @objc var zoomButtonsVisible: Bool {
+        didSet{
+            self.userInterfaceOptions.zoomButtonsVisible = zoomButtonsVisible;
+        }
+    }
+
+    @objc var copyrightDisplay: NSString {
+        didSet{
+            if (copyrightDisplay.isEqual(to: "allowHiding")) {
+                self.userInterfaceOptions.copyrightDisplay = MSCopyrightDisplay.allowHiding;
+            } else if (copyrightDisplay.isEqual(to: "always")) {
+                self.userInterfaceOptions.copyrightDisplay = MSCopyrightDisplay.always
+            }
+        }
+    }
+
   override init(frame: CGRect) {
     mapElementLayer = MSMapElementLayer();
+    self.compassButtonVisible = true;
+    self.tiltButtonVisible=true;
+    self.zoomButtonsVisible=true;
+    self.copyrightDisplay="always";
     super.init(frame: frame);
-    self.buildingsVisible = false;
-    self.businessLandmarksVisible = false;
-    self.transitFeaturesVisible = false;
-    self.userInterfaceOptions.compassButtonVisible=false;
-    self.userInterfaceOptions.copyrightDisplay = MSCopyrightDisplay.allowHiding;
-    self.userInterfaceOptions.tiltButtonVisible = false;
-    self.userInterfaceOptions.zoomButtonsVisible = false;
     
     self.layers.add(mapElementLayer);
     
