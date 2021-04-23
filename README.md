@@ -28,7 +28,7 @@ yarn add react-native-bing-maps
 
 ## Linking
 
-Automatic linking is supported for all platforms (even windows on React native >= 0.63!)
+Automatic linking is supported for both iOS and Android
 
 Previous versions need to do manual linking. No support is offered for these previous react-native versions. Upgrade to modern versions of react-native. Use `upgrade-helper` tool on the internet if needed.
 
