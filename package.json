@@ -1,6 +1,6 @@
 {
   "name": "react-native-bing-maps",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React native wrapper for Bing Maps",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
