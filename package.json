@@ -36,13 +36,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/Akarsh08/react-native-bing-maps",
+  "repository": "https://github.com/GeekyAnts/react-native-bing-maps",
   "author": "Akarsh <akarshs@geekyants.com> (https://github.com/Akarsh08)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Akarsh08/react-native-bing-maps/issues"
+    "url": "https://github.com/GeekyAnts/react-native-bing-maps/issues"
   },
-  "homepage": "https://github.com/Akarsh08/react-native-bing-maps#readme",
+  "homepage": "https://github.com/GeekyAnts/react-native-bing-maps#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
