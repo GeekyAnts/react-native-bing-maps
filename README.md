@@ -38,7 +38,7 @@ Bing Maps Key. Must be obtained to use the Bing Maps SDK. The Bing Maps Key will
 
 ### Android credentials setup
 
-In order to use Bing Maps on android you need to add the credential key to gradle.
+In order to use Bing Maps on Android you need to add the credential key to gradle.
 
 1. create a `secrets.gradle` file in `android/app/` folder with the following contents
 
